@@ -1,0 +1,139 @@
+/* General reset */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: black; /* Dark background for contrast */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between name and menu */
+    align-items: center; /* Center the text vertically */
+     /* Dark navbar background */
+    padding: 10px 20px; /* Space around the navbar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Name styling */
+.name {
+    /* Blue color for name */
+    font-weight: bold;
+    font-size: 2.1em;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling */
+}
+
+.name:hover {
+    transform: scale(1.1); /* Slightly enlarge name on hover */
+    color: #34deeb;
+}
+
+/* Menu styling */
+.menu {
+    display: flex;
+    gap: 25px; /* Space between menu items */
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: relative; /* For underline effect */
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #34deeb;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Start hidden */
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out; /* Smooth underline animation */
+}
+
+.menu a:hover::before {
+    transform: scaleX(1); /* Full-width underline on hover */
+    transform-origin: left; /* Animate from left to right */
+}
+
+.menu a:hover {
+    color: #34deeb; /* Blue color on hover */
+    transform: translateY(-3px); /* Slightly moves up on hover */
+}
+.image-container2 {
+    display: flex;
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image if needed */
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.image-container2 img {
+    border-radius: 50%; /* Makes the image rounded */
+    width: 400px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+    border: 10px solid rgb(0, 162, 255); /* Blue border around the image */
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5); /* Blue shadow around the image */
+   
+}
+h1{
+    text-align: center;
+    color: #f9f9f9;
+    padding-bottom: 20px;
+}
+p{
+    color: #f9f9f9a5;
+    font-size: 20px;
+    text-indent: 70px; /* Indent the first line by 50px */
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the button */
+    margin-top: 30px; /* Adds space above the button */
+}
+
+/* Styling for the 'Read More' button */
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px; /* Rounded edges */
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background: linear-gradient(135deg, #5b0f9b, #1f65d0); /* Hover gradient */
+    box-shadow: 0 12px 20px rgba(106, 17, 203, 0.5); /* Larger shadow on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+

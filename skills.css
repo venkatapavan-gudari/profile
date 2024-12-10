@@ -1,0 +1,234 @@
+/* General reset */
+body, h1, h2, p, ul, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: black; /* Dark background for contrast */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between name and menu */
+    align-items: center; /* Center the text vertically */
+    padding: 10px 20px; /* Space around the navbar */
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Name styling */
+.name {
+    font-weight: bold;
+    font-size: 2.1em;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling */
+}
+
+.name:hover {
+    transform: scale(1.1); /* Slightly enlarge name on hover */
+    color: #34deeb;
+}
+
+/* Menu styling */
+.menu {
+    display: flex;
+    gap: 25px; /* Space between menu items */
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: relative; /* For underline effect */
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #34deeb;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Start hidden */
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out; /* Smooth underline animation */
+}
+
+.menu a:hover::before {
+    transform: scaleX(1); /* Full-width underline on hover */
+    transform-origin: left; /* Animate from left to right */
+}
+
+.menu a:hover {
+    color: #34deeb; /* Blue color on hover */
+    transform: translateY(-3px); /* Slightly moves up on hover */
+}
+
+/* Main content layout */
+/* Main content layout */
+.main-content {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    gap: 20px; /* Space between the two sections */
+    align-items: stretch; /* Ensure both sections stretch to the same height */
+    max-width: 1200px; /* Max width for content area */
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+/* Left Section Styling */
+.left-section {
+    flex: 1; /* Allow it to grow and fill available space */
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills section styling */
+.skills-section {
+    flex: 1; /* Allow it to grow and fill available space */
+    padding: 20px;
+    background-color: #292929;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.profile-photo {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 120px; /* Adjust size as needed */
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro h2 {
+    color: #34deeb;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.hire-me-btn {
+    
+    padding: 10px 25px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #34deeb;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hire-me-btn:hover {
+    background-color: #ff6b6b;
+}
+
+/* Skills section styling */
+.skills-section {
+    flex: 1; /* Allow it to grow and fill available space */
+   
+    background-color: #292929;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #34deeb;
+    font-size: 2em;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1em;
+    
+}
+
+.progress {
+    width: 100%;
+    background-color: #333;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #34deeb, #2575fc);
+    transition: width 1s ease-in-out;
+}
+
+/* Progress bar specific widths */
+.html-bar {
+    width: 90%; /* Change as per proficiency */
+}
+
+.css-bar {
+    width: 85%;
+}
+
+.js-bar {
+    width: 55%;
+}
+
+.c-bar {
+    width: 80%;
+}
+
+.java-bar {
+    width: 70%;
+}
+
+/* Animation */
+@keyframes grow {
+    0% { width: 0; }
+    100% { width: var(--progress-width); }
+}
+
+.progress-bar {
+    animation: grow 2s ease-in-out;
+}

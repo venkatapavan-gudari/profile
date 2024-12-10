@@ -1,0 +1,129 @@
+/* General reset */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: black; /* Dark background for contrast */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between name and menu */
+    align-items: center; /* Center the text vertically */
+     /* Dark navbar background */
+    padding: 10px 20px; /* Space around the navbar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Name styling */
+.name {
+    /* Blue color for name */
+    font-weight: bold;
+    font-size: 2.1em;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling */
+}
+
+.name:hover {
+    transform: scale(1.1); /* Slightly enlarge name on hover */
+    color: #34deeb;
+}
+
+/* Menu styling */
+.menu {
+    display: flex;
+    gap: 25px; /* Space between menu items */
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: relative; /* For underline effect */
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #34deeb;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Start hidden */
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out; /* Smooth underline animation */
+}
+
+.menu a:hover::before {
+    transform: scaleX(1); /* Full-width underline on hover */
+    transform-origin: left; /* Animate from left to right */
+}
+
+.menu a:hover {
+    color: #34deeb; /* Blue color on hover */
+    transform: translateY(-3px); /* Slightly moves up on hover */
+}
+
+/* Education section */
+.education-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.box {
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(39, 222, 245, 0.8);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box h2 {
+    color: #ecf0f1;
+    font-size: 1.8em;
+}
+
+.box p {
+    color: #bdc3c7;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+h1{
+    text-align: center;
+    padding-top: 4%;
+    color: #34deeb;
+}
+h1:hover {
+    color: #3493eb; /* Change color on hover */
+    border-bottom-color: #fff; /* Change border color on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
